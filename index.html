@@ -25,9 +25,10 @@
 
           <!-- CODE FOR SEARCH FORM -->
           <div class="ui icon input">
-            <input id="filter-input" type="text" name="filter" value="" placeholder="Search for gifts...">
+            <input id="filter-input" type="search" name="filter" value="" placeholder="Search for gifts...">
             <i class="search icon"></i>
           </div>
+          <a href="#" id="filter-clear" class="search-clear">Clear</a>
 
           <!-- END CODE FOR SEARCH FORM -->
 
@@ -36,6 +37,7 @@
 
           <!-- CODE FOR NEW GIFT FORM -->
           <form id="gift-form" class="ui form" action="index.html" method="POST">
+            <input type="hidden" name="id" value="">
             <label for="name">Gift Name: </label>
             <input id="gift-name-input" type="text" name="name" value="">
             <label for="image">Gift Image: </label>
@@ -48,18 +50,15 @@
         </div>
         <div class="two wide column"></div>
       </div>
+      <div class="ui divider"></div>
       <div class="row">
-        <div class="two wide column"></div>
-        <div class="ui raised very padded text container segment">
-
+        <!-- <div class="one wide column"></div> -->
+        <div class="ui container gifts-container">
           <!-- CODE FOR LIST OF GIFTS -->
-          <ul class="gift-list">
-            <li>No gifts yet :(</li>
-          </ul>
+          <ul class="gift-list ui cards"></ul>
           <!-- ENDCODE FOR LIST OF GIFTS -->
-
         </div>
-        <div class="two wide column"></div>
+        <!-- <div class="one wide column"></div> -->
       </div>
     </div>
   </body>
